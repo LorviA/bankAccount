@@ -1,0 +1,702 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\data\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\data\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\validators\\addtransfercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\validators\\addtransfercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\validators\\createtransactioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\validators\\createtransactioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\validation\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\validation\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\mappers\\transactionmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\mappers\\transactionmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\dtos\\transactiondto\\createtransferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\dtos\\transactiondto\\createtransferdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\dtos\\transactiondto\\createtransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\dtos\\transactiondto\\createtransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\mappers\\accountmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\mappers\\accountmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\dtos\\accountdto\\updateaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\dtos\\accountdto\\updateaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\dtos\\accountdto\\createaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\dtos\\accountdto\\createaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\bankaccount.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\bankaccount.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\handlers\\getaccountbyownerhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\handlers\\getaccountbyownerhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\handlers\\deleteaccountcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\handlers\\deleteaccountcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\handlers\\addtransfercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\handlers\\addtransfercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\validators\\updateaccountcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\validators\\updateaccountcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\validators\\addaccountcomandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\validators\\addaccountcomandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\commands\\updateaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\commands\\updateaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\commands\\createtransactioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\commands\\createtransactioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\commands\\addtransfercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\commands\\addtransfercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\exceptions\\validationappexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\exceptions\\validationappexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\handlers\\addaccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\handlers\\addaccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\handlers\\getaccountshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\handlers\\getaccountshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\handlers\\createtransactioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\handlers\\createtransactioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\commands\\addaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\commands\\addaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\handlers\\updateaccountcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\handlers\\updateaccountcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\commands\\deleteaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\commands\\deleteaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\handlers\\getaccountbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\handlers\\getaccountbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\queries1\\getaccountbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\queries1\\getaccountbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\queries1\\getaccountbyownerquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\queries1\\getaccountbyownerquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\queries1\\getaccountsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\queries1\\getaccountsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\abstractions\\iqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\abstractions\\iqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\abstractions\\icommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\abstractions\\icommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\abstractions\\iquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\abstractions\\iquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\abstractions\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\abstractions\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "bankAccount\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAuwHgAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T19:42:07.698Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Data\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Data\\AccountRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Data\\AccountRepository.cs",
+              "RelativeToolTip": "bankAccount\\Data\\AccountRepository.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAYwF0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T08:00:42.801Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateAccountDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Dtos\\AccountDto\\CreateAccountDto.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Dtos\\AccountDto\\CreateAccountDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Dtos\\AccountDto\\CreateAccountDto.cs",
+              "RelativeToolTip": "bankAccount\\Dtos\\AccountDto\\CreateAccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T19:27:24.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ValidationBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Validation\\ValidationBehavior.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Validation\\ValidationBehavior.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Validation\\ValidationBehavior.cs",
+              "RelativeToolTip": "bankAccount\\Validation\\ValidationBehavior.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwCYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:11:45.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TransactionMapper.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Mappers\\TransactionMapper.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Mappers\\TransactionMapper.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Mappers\\TransactionMapper.cs",
+              "RelativeToolTip": "bankAccount\\Mappers\\TransactionMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T20:04:26.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountMapper.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Mappers\\AccountMapper.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Mappers\\AccountMapper.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Mappers\\AccountMapper.cs",
+              "RelativeToolTip": "bankAccount\\Mappers\\AccountMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T19:39:29.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddTransferCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Validators\\AddTransferCommandValidator.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Validators\\AddTransferCommandValidator.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Validators\\AddTransferCommandValidator.cs",
+              "RelativeToolTip": "bankAccount\\Validators\\AddTransferCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T18:47:02.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateTransactionCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Validators\\CreateTransactionCommandValidator.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Validators\\CreateTransactionCommandValidator.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Validators\\CreateTransactionCommandValidator.cs",
+              "RelativeToolTip": "bankAccount\\Validators\\CreateTransactionCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T18:52:30.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UpdateAccountDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Dtos\\AccountDto\\UpdateAccountDto.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Dtos\\AccountDto\\UpdateAccountDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Dtos\\AccountDto\\UpdateAccountDto.cs",
+              "RelativeToolTip": "bankAccount\\Dtos\\AccountDto\\UpdateAccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T19:32:38.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateTransactionDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Dtos\\TransactionDto\\CreateTransactionDto.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Dtos\\TransactionDto\\CreateTransactionDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Dtos\\TransactionDto\\CreateTransactionDto.cs",
+              "RelativeToolTip": "bankAccount\\Dtos\\TransactionDto\\CreateTransactionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T19:36:36.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateTransferDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Dtos\\TransactionDto\\CreateTransferDto.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Dtos\\TransactionDto\\CreateTransferDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Dtos\\TransactionDto\\CreateTransferDto.cs",
+              "RelativeToolTip": "bankAccount\\Dtos\\TransactionDto\\CreateTransferDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T19:37:44.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Models\\Transaction.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Models\\Transaction.cs",
+              "RelativeToolTip": "bankAccount\\Models\\Transaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T19:25:23.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Account.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Models\\Account.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Models\\Account.cs",
+              "RelativeToolTip": "bankAccount\\Models\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T19:00:13.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "bankAccount\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T13:09:12.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "bankAccount",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\bankAccount.csproj",
+              "RelativeDocumentMoniker": "bankAccount\\bankAccount.csproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\bankAccount.csproj",
+              "RelativeToolTip": "bankAccount\\bankAccount.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-28T07:59:42.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GetAccountByOwnerHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\GetAccountByOwnerHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Handlers\\GetAccountByOwnerHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\GetAccountByOwnerHandler.cs",
+              "RelativeToolTip": "bankAccount\\Handlers\\GetAccountByOwnerHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:08:24.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DeleteAccountCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\DeleteAccountCommandHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Handlers\\DeleteAccountCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\DeleteAccountCommandHandler.cs",
+              "RelativeToolTip": "bankAccount\\Handlers\\DeleteAccountCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:27:23.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AddTransferCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\AddTransferCommandHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Handlers\\AddTransferCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\AddTransferCommandHandler.cs",
+              "RelativeToolTip": "bankAccount\\Handlers\\AddTransferCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T16:30:09.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Program.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Program.cs",
+              "RelativeToolTip": "bankAccount\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwB4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T17:55:19.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AddAccountComandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Validators\\AddAccountComandValidator.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Validators\\AddAccountComandValidator.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Validators\\AddAccountComandValidator.cs",
+              "RelativeToolTip": "bankAccount\\Validators\\AddAccountComandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T12:25:45.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UpdateAccountCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Validators\\UpdateAccountCommandValidator.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Validators\\UpdateAccountCommandValidator.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Validators\\UpdateAccountCommandValidator.cs",
+              "RelativeToolTip": "bankAccount\\Validators\\UpdateAccountCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T18:54:52.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AddTransferCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Commands\\AddTransferCommand.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Commands\\AddTransferCommand.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Commands\\AddTransferCommand.cs",
+              "RelativeToolTip": "bankAccount\\Commands\\AddTransferCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T16:26:43.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UpdateAccountCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Commands\\UpdateAccountCommand.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Commands\\UpdateAccountCommand.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Commands\\UpdateAccountCommand.cs",
+              "RelativeToolTip": "bankAccount\\Commands\\UpdateAccountCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T15:00:05.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CreateTransactionCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Commands\\CreateTransactionCommand.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Commands\\CreateTransactionCommand.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Commands\\CreateTransactionCommand.cs",
+              "RelativeToolTip": "bankAccount\\Commands\\CreateTransactionCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T16:05:12.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GetAccountsHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\GetAccountsHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Handlers\\GetAccountsHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\GetAccountsHandler.cs",
+              "RelativeToolTip": "bankAccount\\Handlers\\GetAccountsHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAACBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T08:31:54.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ValidationAppException.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Exceptions\\ValidationAppException.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Exceptions\\ValidationAppException.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Exceptions\\ValidationAppException.cs",
+              "RelativeToolTip": "bankAccount\\Exceptions\\ValidationAppException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T12:37:38.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AddAccountHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\AddAccountHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Handlers\\AddAccountHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\AddAccountHandler.cs",
+              "RelativeToolTip": "bankAccount\\Handlers\\AddAccountHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T09:12:23.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CreateTransactionCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\CreateTransactionCommandHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Handlers\\CreateTransactionCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\CreateTransactionCommandHandler.cs",
+              "RelativeToolTip": "bankAccount\\Handlers\\CreateTransactionCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T16:06:49.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UpdateAccountCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\UpdateAccountCommandHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Handlers\\UpdateAccountCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\UpdateAccountCommandHandler.cs",
+              "RelativeToolTip": "bankAccount\\Handlers\\UpdateAccountCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T15:01:54.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AddAccountCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Commands\\AddAccountCommand.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Commands\\AddAccountCommand.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Commands\\AddAccountCommand.cs",
+              "RelativeToolTip": "bankAccount\\Commands\\AddAccountCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T09:02:14.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "GetAccountByIdHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\GetAccountByIdHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Handlers\\GetAccountByIdHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\GetAccountByIdHandler.cs",
+              "RelativeToolTip": "bankAccount\\Handlers\\GetAccountByIdHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T09:24:20.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "GetAccountByIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Queries1\\GetAccountByIdQuery.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Queries1\\GetAccountByIdQuery.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Queries1\\GetAccountByIdQuery.cs",
+              "RelativeToolTip": "bankAccount\\Queries1\\GetAccountByIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T09:21:56.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DeleteAccountCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Commands\\DeleteAccountCommand.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Commands\\DeleteAccountCommand.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Commands\\DeleteAccountCommand.cs",
+              "RelativeToolTip": "bankAccount\\Commands\\DeleteAccountCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:23:56.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "GetAccountByOwnerQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Queries1\\GetAccountByOwnerQuery.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Queries1\\GetAccountByOwnerQuery.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Queries1\\GetAccountByOwnerQuery.cs",
+              "RelativeToolTip": "bankAccount\\Queries1\\GetAccountByOwnerQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:06:07.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "GetAccountsQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Queries1\\GetAccountsQuery.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Queries1\\GetAccountsQuery.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Queries1\\GetAccountsQuery.cs",
+              "RelativeToolTip": "bankAccount\\Queries1\\GetAccountsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T08:30:19.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Abstractions\\IQueryHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Abstractions\\IQueryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Abstractions\\IQueryHandler.cs",
+              "RelativeToolTip": "bankAccount\\Abstractions\\IQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:14:55.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ICommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Abstractions\\ICommandHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Abstractions\\ICommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Abstractions\\ICommandHandler.cs",
+              "RelativeToolTip": "bankAccount\\Abstractions\\ICommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:14:21.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "IQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Abstractions\\IQuery.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Abstractions\\IQuery.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Abstractions\\IQuery.cs",
+              "RelativeToolTip": "bankAccount\\Abstractions\\IQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:13:50.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ICommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Abstractions\\ICommand.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Abstractions\\ICommand.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Abstractions\\ICommand.cs",
+              "RelativeToolTip": "bankAccount\\Abstractions\\ICommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:13:06.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\appsettings.json",
+              "RelativeDocumentMoniker": "bankAccount\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\appsettings.json",
+              "RelativeToolTip": "bankAccount\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-28T07:45:39.831Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

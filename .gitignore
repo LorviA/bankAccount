@@ -1,0 +1,12 @@
+*.dll
+*.v9.bin
+*.cache
+*.txt
+*.bin
+*.v2
+*.config
+*.vsidex
+*.db
+*.db-shm
+*.db-wal
+*.vsidx

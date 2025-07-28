@@ -1,0 +1,156 @@
+[
+  {
+    "ContainingType": "bankAccount.Controllers.AccountController",
+    "Method": "GetAccountById",
+    "RelativePath": "bankAccount/account/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "GetAccountById"
+  },
+  {
+    "ContainingType": "bankAccount.Controllers.AccountController",
+    "Method": "DeleteAccount",
+    "RelativePath": "bankAccount/account/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "bankAccount.Controllers.AccountController",
+    "Method": "GetAllAccounts",
+    "RelativePath": "bankAccount/account/All",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "bankAccount.Controllers.AccountController",
+    "Method": "GetAccountsByOwner",
+    "RelativePath": "bankAccount/account/ByOwner",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ownerId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "bankAccount.Controllers.AccountController",
+    "Method": "CreateAccount",
+    "RelativePath": "bankAccount/account/create Account",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountDto",
+        "Type": "bankAccount.Dtos.AccountDto.CreateAccountDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "bankAccount.Controllers.AccountController",
+    "Method": "CreateTransaction",
+    "RelativePath": "bankAccount/account/create Transaction",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newTransactionDto",
+        "Type": "bankAccount.Dtos.TransactionDto.CreateTransactionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "bankAccount.Controllers.AccountController",
+    "Method": "GetAccountStatement",
+    "RelativePath": "bankAccount/account/statement/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "bankAccount.Controllers.AccountController",
+    "Method": "CreateTransfer",
+    "RelativePath": "bankAccount/account/transfer",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transferDto",
+        "Type": "bankAccount.Dtos.TransactionDto.CreateTransferDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "bankAccount.Controllers.AccountController",
+    "Method": "UpdateAccont",
+    "RelativePath": "bankAccount/account/update Account",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "updateDto",
+        "Type": "bankAccount.Dtos.AccountDto.UpdateAccountDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
