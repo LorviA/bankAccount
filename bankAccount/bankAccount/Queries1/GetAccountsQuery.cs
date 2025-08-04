@@ -3,5 +3,5 @@ using MediatR;
 
 namespace bankAccount.Queries1
 {
-    public record GetAccountsQuery() : IRequest<IEnumerable<Account>>;
+    public record GetAccountsQuery() : IRequest<MbResult<IEnumerable<Account>>>;
 }

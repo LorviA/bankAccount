@@ -1,19 +1,47 @@
 ﻿using bankAccount.Commands;
 using bankAccount.Data;
+using bankAccount.Interfaces;
 using bankAccount.Models;
+using FluentValidation;
 using MediatR;
 
 namespace bankAccount.Handlers
 {
-    public class AddAccountHandler(AccountRepository accountRepository) : IRequestHandler<AddAccountCommand, Account>
+    public class AddAccountCommandHandler : IRequestHandler<AddAccountCommand, MbResult<Account>>
     {
-        private readonly AccountRepository _accountRepository = accountRepository;
+        private readonly IAccountRepository _accountRepository;
+        private readonly IValidator<Account> _validator;
 
-        public async Task<Account> Handle(AddAccountCommand request, CancellationToken cancellationToken)
+        public AddAccountCommandHandler(
+            IAccountRepository accountRepository,
+            IValidator<Account> validator)
         {
-            await _accountRepository.AddProduct(request.Accont);
+            _accountRepository = accountRepository;
+            _validator = validator;
+        }
 
-            return request.Accont;
+        public async Task<MbResult<Account>> Handle(
+            AddAccountCommand request,
+            CancellationToken cancellationToken)
+        {
+            var validationResult = await _validator.ValidateAsync(request.Accont);
+
+            if (!validationResult.IsValid)
+            {
+                var errors = validationResult.Errors
+                    .GroupBy(e => e.PropertyName)
+                    .ToDictionary(
+                        g => g.Key,
+                        g => g.Select(e => e.ErrorMessage).Distinct().ToArray()
+                    );
+
+                return MbResult<Account>.Failure(
+                    MbError.ValidationError(errors)
+                );
+            }
+
+            var createdAccount = await _accountRepository.AddProduct(request.Accont);
+            return MbResult<Account>.Success(createdAccount);
         }
     }
 }

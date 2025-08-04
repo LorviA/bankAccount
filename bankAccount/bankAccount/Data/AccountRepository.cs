@@ -1,9 +1,10 @@
-﻿using bankAccount.Models;
+﻿using bankAccount.Interfaces;
+using bankAccount.Models;
 using System.Security.Principal;
 
 namespace bankAccount.Data
 {
-    public class AccountRepository
+    public class AccountRepository: IAccountRepository
     {
         private static List<Account> _accounts;
 
@@ -11,15 +12,16 @@ namespace bankAccount.Data
         {
             _accounts =
             [
-                new() { Id = Guid.NewGuid(), OwnerId = Guid.NewGuid(), Type = "Deposit", Balance = 1000, InterestRate = 0},
-                new() { Id = Guid.NewGuid(), OwnerId = Guid.NewGuid(), Type = "Checking ", Balance = 320, InterestRate = 0}
+                new() { Id = Guid.NewGuid(), OwnerId = Guid.NewGuid(), Type = AccountType.Credit, Balance = 1000, InterestRate = 0},
+                new() { Id = Guid.NewGuid(), OwnerId = Guid.NewGuid(), Type = AccountType.Checking, Balance = 320, InterestRate = 0}
             ];
         }
 
-        public async Task AddProduct(Account account)
+        public async Task<Account?> AddProduct(Account account)
         {
             _accounts.Add(account);
-            await Task.CompletedTask;
+            var result = account;
+            return result;
         }
 
         public async Task<Account?> UpdateProdict(Guid Id, Account account)
@@ -37,9 +39,13 @@ namespace bankAccount.Data
 
         public async Task<Account?> GetProductById(Guid id)
         {
+            Console.WriteLine("Repo");
+            Console.WriteLine(id);
             var account = await Task.FromResult(_accounts.FirstOrDefault(a => a.Id == id));
+            Console.WriteLine(account);
             if (account != null)
             {
+                Console.WriteLine("Yes");
                 return account;
             }
             return null;
@@ -58,15 +64,15 @@ namespace bankAccount.Data
             return null;
         }
 
-        public async Task<Account?> CreateTransaction(Transaction transaction)
+        public async Task<Account?> CreateTransaction(Guid id, Transaction transaction)
         {
-            var account = await Task.FromResult(_accounts.FirstOrDefault(a => a.Id == transaction.AccountId));
+            var account = await Task.FromResult(_accounts.FirstOrDefault(a => a.Id == id));
             if (account != null)
             {
                 var balance = account.Balance;
-                if(transaction.Type == "Credit")
+                if(transaction.Type == TransactionType.Credit)
                     account.Balance = balance - transaction.Amount;
-                if (transaction.Type == "Debit")
+                if (transaction.Type == TransactionType.Debit)
                     account.Balance = balance + transaction.Amount;
                 account.Transactions.Add(transaction);
                 return account;
@@ -90,10 +96,10 @@ namespace bankAccount.Data
             toAccount.Balance = balanceT+  transfer.Amount;
 
             var fTransfer = transfer;
-            fTransfer.Type = "Credit";
+            fTransfer.Type = TransactionType.Credit;
             fromAccount.Transactions.Add(fTransfer);
             var tTransfer = transfer;
-            tTransfer.Type = "Debit";
+            tTransfer.Type = TransactionType.Debit;
             toAccount.Transactions.Add(tTransfer);
             return [fromAccount, toAccount];
         }

@@ -1,4 +1,4 @@
-@bankAccount_HostAddress = http://localhost:5027
+@bankAccount_HostAddress = http://localhost:8080
 
 GET {{bankAccount_HostAddress}}/weatherforecast/
 Accept: application/json

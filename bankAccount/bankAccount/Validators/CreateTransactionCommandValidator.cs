@@ -13,9 +13,6 @@ namespace bankAccount.Validators
             RuleFor(p => p.Transaction.Amount)
                 .GreaterThan(1)
                 .WithMessage("Amount должен быть больше 1");
-            RuleFor(p => p.Transaction.Type)
-                .Must(type => new[] { "Deposit", "Credit" }.Contains(type))
-                .WithMessage("Type допустимые значения  Deposit | Credit");
             RuleFor(p => p.Transaction.Description)
                 .MaximumLength(300)
                 .WithMessage("Description длина не болше 300 символов");
