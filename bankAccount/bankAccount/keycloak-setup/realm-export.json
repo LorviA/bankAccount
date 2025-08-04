@@ -1,0 +1,41 @@
+﻿{
+  "realm": "bank",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "account-service",
+      "enabled": true,
+      "publicClient": false,
+      "secret": "your-client-secret",
+      "redirectUris": [ "http://localhost:8080/*" ],
+      "webOrigins": [ "*" ],
+      "attributes": {
+        "access.token.lifespan": 300
+      }
+    }
+  ],
+  "users": [
+    {
+      "username": "manager",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [ "manager" ]
+    },
+    {
+      "username": "client",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": [ "user" ]
+    }
+  ]
+}

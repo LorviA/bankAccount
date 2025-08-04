@@ -3,5 +3,5 @@ using MediatR;
 
 namespace bankAccount.Commands
 {
-    public record UpdateAccountCommand(Guid Id, Account Accont) : IRequest<Account>;
+    public record UpdateAccountCommand(Guid Id, Account Accont) : IRequest<MbResult<Account>>;
 }

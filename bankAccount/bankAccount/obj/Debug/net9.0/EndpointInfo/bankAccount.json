@@ -1,32 +1,52 @@
 {
   "openapi": "3.0.4",
   "info": {
-    "title": "bankAccount",
-    "version": "1.0"
+    "title": "Bank API",
+    "version": "v1"
   },
   "paths": {
-    "/bankAccount/account/All": {
+    "/All": {
       "get": {
         "tags": [
           "Account"
         ],
+        "summary": "Get All Account",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Returns List[account]",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountIEnumerableMbResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountIEnumerableMbResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountIEnumerableMbResult"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/bankAccount/account/{id}": {
+    "/{id}": {
       "get": {
         "tags": [
           "Account"
         ],
+        "summary": "Get one account for id",
         "operationId": "GetAccountById",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Id return account",
             "required": true,
             "schema": {
               "type": "string",
@@ -36,7 +56,44 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Returns account",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Account"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Account"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Account"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No accounts found for ID:",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MbError"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MbError"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MbError"
+                }
+              }
+            }
           }
         }
       },
@@ -44,10 +101,12 @@
         "tags": [
           "Account"
         ],
+        "summary": "Delete account with id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Id delete account",
             "required": true,
             "schema": {
               "type": "string",
@@ -56,21 +115,43 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "Successful deletion"
+          },
+          "404": {
+            "description": "No accounts found for ID",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/bankAccount/account/ByOwner": {
+    "/ByOwner": {
       "get": {
         "tags": [
           "Account"
         ],
+        "summary": "Get one account for owner id",
         "parameters": [
           {
             "name": "ownerId",
             "in": "query",
+            "description": "OwnerId return account",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -79,20 +160,59 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Returns account",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountIEnumerableMbResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountIEnumerableMbResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountIEnumerableMbResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No accounts found for owner ID:",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/bankAccount/account/statement/{Id}": {
+    "/accounts/{id}/statement": {
       "get": {
         "tags": [
           "Account"
         ],
+        "summary": "Receives an account statement from startDate to endDate",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Id account for statement",
             "required": true,
             "schema": {
               "type": "string",
@@ -102,6 +222,7 @@
           {
             "name": "startDate",
             "in": "query",
+            "description": "The initial date of the account statement",
             "schema": {
               "type": "string",
               "format": "date-time"
@@ -110,6 +231,7 @@
           {
             "name": "endDate",
             "in": "query",
+            "description": "The end date of the account statement",
             "schema": {
               "type": "string",
               "format": "date-time"
@@ -118,17 +240,56 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Returns List[Transaction]",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionIEnumerableMbResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionIEnumerableMbResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionIEnumerableMbResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No accounts found for ID:",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/bankAccount/account/create Account": {
+    "/accounts": {
       "post": {
         "tags": [
           "Account"
         ],
+        "summary": "Creates a new bank account",
         "requestBody": {
+          "description": "Account details",
           "content": {
             "application/json": {
               "schema": {
@@ -148,21 +309,66 @@
           }
         },
         "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountMbResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountMbResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountMbResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              }
+            }
+          },
           "200": {
-            "description": "OK"
+            "description": "Returns the created account"
+          },
+          "421": {
+            "description": "If validation fails"
           }
         }
       }
     },
-    "/bankAccount/account/update Account": {
+    "/update": {
       "put": {
         "tags": [
           "Account"
         ],
+        "summary": "account modified",
         "parameters": [
           {
             "name": "id",
             "in": "query",
+            "description": "id account being modified",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -170,6 +376,7 @@
           }
         ],
         "requestBody": {
+          "description": "Account details",
           "content": {
             "application/json": {
               "schema": {
@@ -190,17 +397,71 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Returns the created account",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountMbResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountMbResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountMbResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectMbResult"
+                }
+              }
+            }
+          },
+          "421": {
+            "description": "If validation fails"
           }
         }
       }
     },
-    "/bankAccount/account/create Transaction": {
-      "patch": {
+    "/accounts/{id}/transactions": {
+      "post": {
         "tags": [
           "Account"
         ],
+        "summary": "creating an account transaction",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "account id for adding a transaction",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
         "requestBody": {
+          "description": "Transaction details",
           "content": {
             "application/json": {
               "schema": {
@@ -221,17 +482,22 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Returns the modified account"
+          },
+          "421": {
+            "description": "If validation fails"
           }
         }
       }
     },
-    "/bankAccount/account/transfer": {
-      "patch": {
+    "/transfers": {
+      "post": {
         "tags": [
           "Account"
         ],
+        "summary": "creating an account transfer",
         "requestBody": {
+          "description": "Transfer details",
           "content": {
             "application/json": {
               "schema": {
@@ -250,6 +516,21 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Returns the modified account"
+          },
+          "421": {
+            "description": "If validation fails"
+          }
+        }
+      }
+    },
+    "/userinfo": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -260,14 +541,21 @@
   },
   "components": {
     "schemas": {
-      "CreateAccountDto": {
+      "Account": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
           "ownerId": {
             "type": "string",
             "format": "uuid"
           },
           "type": {
+            "$ref": "#/components/schemas/AccountType"
+          },
+          "currency": {
             "type": "string",
             "nullable": true
           },
@@ -275,6 +563,106 @@
             "type": "number",
             "format": "double",
             "nullable": true
+          },
+          "interestRate": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "openingDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "closeDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "transactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Transaction"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AccountIEnumerableMbResult": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean",
+            "description": "Успешность выполнения операции",
+            "readOnly": true
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Account"
+            },
+            "description": "Результат операции (только при успехе)",
+            "nullable": true,
+            "readOnly": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/MbError"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Результат операции, содержащий либо значение, либо ошибку"
+      },
+      "AccountMbResult": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean",
+            "description": "Успешность выполнения операции",
+            "readOnly": true
+          },
+          "value": {
+            "$ref": "#/components/schemas/Account"
+          },
+          "error": {
+            "$ref": "#/components/schemas/MbError"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Результат операции, содержащий либо значение, либо ошибку"
+      },
+      "AccountType": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CreateAccountDto": {
+        "type": "object",
+        "properties": {
+          "ownerId": {
+            "type": "string",
+            "description": "Identifier of the account owner (user)",
+            "format": "uuid",
+            "example": "a8a110d5-fc49-43c5-bf46-802a8e92d966"
+          },
+          "type": {
+            "$ref": "#/components/schemas/AccountType"
+          },
+          "balance": {
+            "type": "number",
+            "description": "Current account balance.",
+            "format": "double",
+            "nullable": true,
+            "example": 1500,75
+          },
+          "currency": {
+            "type": "string",
+            "description": "Currency code according to ISO 4217 standard",
+            "nullable": true,
+            "example": "USD"
           },
           "interestRate": {
             "type": "number",
@@ -300,22 +688,27 @@
         "properties": {
           "accountId": {
             "type": "string",
-            "format": "uuid"
+            "description": "Identifier of the account owner (user)",
+            "format": "uuid",
+            "example": "a8a110d5-fc49-43c5-bf46-802a8e92d966"
           },
           "amount": {
             "type": "number",
+            "description": "The transaction amount must be greater than 0",
             "format": "double"
           },
           "currency": {
             "type": "string",
-            "nullable": true
+            "description": "Currency code according to ISO 4217 standard",
+            "nullable": true,
+            "example": "USD"
           },
           "type": {
-            "type": "string",
-            "nullable": true
+            "$ref": "#/components/schemas/TransactionType"
           },
           "description": {
             "type": "string",
+            "description": "max length 300",
             "nullable": true
           },
           "time": {
@@ -330,26 +723,33 @@
         "properties": {
           "accountId": {
             "type": "string",
-            "format": "uuid"
+            "description": "Identifier of the account owner (user)",
+            "format": "uuid",
+            "example": "a8a110d5-fc49-43c5-bf46-802a8e92d966"
           },
           "counterpartyAccountId": {
             "type": "string",
-            "format": "uuid"
+            "description": "The identifier of the counterparty's (user's) account holder",
+            "format": "uuid",
+            "example": "a8a110d5-fc49-43c5-bf46-802a8e92d966"
           },
           "amount": {
             "type": "number",
+            "description": "The transaction amount must be greater than 0",
             "format": "double"
           },
           "currency": {
             "type": "string",
-            "nullable": true
+            "description": "Currency code according to ISO 4217 standard",
+            "nullable": true,
+            "example": "USD"
           },
           "type": {
-            "type": "string",
-            "nullable": true
+            "$ref": "#/components/schemas/TransactionType"
           },
           "description": {
             "type": "string",
+            "description": "max length 300",
             "nullable": true
           },
           "time": {
@@ -358,36 +758,96 @@
           }
         },
         "additionalProperties": false
+      },
+      "MbError": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "description": "HTTP статус код ошибки",
+            "format": "int32",
+            "readOnly": true
+          },
+          "message": {
+            "type": "string",
+            "description": "Сообщение об ошибке",
+            "nullable": true,
+            "readOnly": true
+          },
+          "validationErrors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "description": "Детали ошибок валидации (ключ - имя поля)",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Информация об ошибке"
+      },
+      "ObjectMbResult": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean",
+            "description": "Успешность выполнения операции",
+            "readOnly": true
+          },
+          "value": {
+            "description": "Результат операции (только при успехе)",
+            "nullable": true,
+            "readOnly": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/MbError"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Результат операции, содержащий либо значение, либо ошибку"
       },
       "Transaction": {
         "type": "object",
         "properties": {
           "id": {
             "type": "string",
-            "format": "uuid"
+            "description": "Unique identifier for the transaction",
+            "format": "uuid",
+            "example": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
           },
           "accountId": {
             "type": "string",
-            "format": "uuid"
+            "description": "Identifier of the account owner (user)",
+            "format": "uuid",
+            "example": "a8a110d5-fc49-43c5-bf46-802a8e92d966"
           },
           "counterpartyAccountId": {
             "type": "string",
-            "format": "uuid"
+            "description": "The identifier of the counterparty's (user's) account holder",
+            "format": "uuid",
+            "example": "a8a110d5-fc49-43c5-bf46-802a8e92d966"
           },
           "amount": {
             "type": "number",
+            "description": "The transaction amount must be greater than 0",
             "format": "double"
           },
           "currency": {
             "type": "string",
-            "nullable": true
+            "description": "Currency code according to ISO 4217 standard",
+            "nullable": true,
+            "example": "USD"
           },
           "type": {
-            "type": "string",
-            "nullable": true
+            "$ref": "#/components/schemas/TransactionType"
           },
           "description": {
             "type": "string",
+            "description": "max length 300",
             "nullable": true
           },
           "time": {
@@ -397,21 +857,62 @@
         },
         "additionalProperties": false
       },
+      "TransactionIEnumerableMbResult": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean",
+            "description": "Успешность выполнения операции",
+            "readOnly": true
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Transaction"
+            },
+            "description": "Результат операции (только при успехе)",
+            "nullable": true,
+            "readOnly": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/MbError"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Результат операции, содержащий либо значение, либо ошибку"
+      },
+      "TransactionType": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "UpdateAccountDto": {
         "type": "object",
         "properties": {
           "ownerId": {
             "type": "string",
-            "format": "uuid"
+            "description": "Identifier of the account owner (user)",
+            "format": "uuid",
+            "example": "a8a110d5-fc49-43c5-bf46-802a8e92d966"
           },
           "type": {
-            "type": "string",
-            "nullable": true
+            "$ref": "#/components/schemas/AccountType"
           },
           "balance": {
             "type": "number",
+            "description": "Current account balance.",
             "format": "double",
-            "nullable": true
+            "nullable": true,
+            "example": 1500,75
+          },
+          "currency": {
+            "type": "string",
+            "description": "Currency code according to ISO 4217 standard",
+            "nullable": true,
+            "example": "USD"
           },
           "interestRate": {
             "type": "number",
@@ -420,14 +921,17 @@
           },
           "closeDate": {
             "type": "string",
+            "description": "Date when the account was closed (null if active)",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2025-12-31T23:59:59Z"
           },
           "transactions": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Transaction"
             },
+            "description": "List of transactions associated with this account",
             "nullable": true
           }
         },

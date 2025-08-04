@@ -11,7 +11,7 @@ namespace bankAccount.Handlers
 
         public async Task<Account> Handle(CreateTransactionCommand request, CancellationToken cancellationToken)
         {
-           return await _accountRepository.CreateTransaction(request.Transaction);
+           return await _accountRepository.CreateTransaction(request.Id, request.Transaction);
         }
     }
 }

@@ -13,9 +13,6 @@ namespace bankAccount.Validators
             RuleFor(p => p.Accont.Id)
                 .NotEmpty()
                 .WithMessage("Id не может быть пустым");
-            RuleFor(p => p.Accont.Type)
-                .Must(type => new[] { "Checking", "Deposit", "Credit" }.Contains(type))
-                .WithMessage("Type допустимые значения Checking | Deposit | Credit");
             RuleFor(p => p.Accont.InterestRate)
                 .GreaterThan(0)
                 .WithMessage("InterestRate должен быть больше нуля");

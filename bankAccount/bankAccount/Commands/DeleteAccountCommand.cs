@@ -3,5 +3,5 @@ using MediatR;
 
 namespace bankAccount.Commands
 {
-    public record DeleteAccountCommand(Guid Id): IRequest<Account>;
+    public record DeleteAccountCommand(Guid Id): IRequest<MbResult<Account>>;
 }

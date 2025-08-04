@@ -1,0 +1,32 @@
+networks:
+  mynet:
+    driver: bridge
+
+services:
+  bankaccount:
+    networks:
+      - mynet
+    build:
+        context: .
+        dockerfile: bankAccount/Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - Jwt__Authority=http://keycloak:8080/realms/bank
+      - Jwt__Audience=account-service
+
+
+  keycloak:
+    networks:
+      - mynet
+    image: quay.io/keycloak/keycloak:24.0.2
+    command: start-dev
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./keycloak-setup:/opt/keycloak/data/import
+    
+        
