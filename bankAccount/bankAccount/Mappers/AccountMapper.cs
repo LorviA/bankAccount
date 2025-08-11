@@ -18,6 +18,7 @@ namespace bankAccount.Mappers
             };
         }
 
+        // ReSharper disable once InconsistentNaming
         public static Account ToAccountFromUpdate(this UpdateAccountDto accountModel, Guid Id)
         {
             return new Account

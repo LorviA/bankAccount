@@ -17,13 +17,17 @@ namespace bankAccount.Controllers
                 return Ok(result.Value);
             }
 
-            return result.Error switch
+            if (result.Error != null)
             {
-                { StatusCode: 400 } => BadRequest(result.Error),
-                { StatusCode: 401 } => Unauthorized(result.Error),
-                { StatusCode: 404 } => NotFound(result.Error),
-                _ => StatusCode(result.Error.StatusCode, result.Error)
-            };
+                return result.Error switch
+                {
+                    { StatusCode: 400 } => BadRequest(result.Error),
+                    { StatusCode: 401 } => Unauthorized(result.Error),
+                    { StatusCode: 404 } => NotFound(result.Error),
+                    _ => StatusCode(result.Error.StatusCode, result.Error)
+                };
+            }
+            return Ok(result.Value);
         }
     }
 }

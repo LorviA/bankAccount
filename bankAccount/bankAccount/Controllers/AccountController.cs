@@ -8,7 +8,6 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using System.Security.Principal;
 
 namespace bankAccount.Controllers
 {
@@ -18,6 +17,7 @@ namespace bankAccount.Controllers
     [Authorize]
     public class AccountController(IMediator mediator) : BaseController
     {
+        // ReSharper disable once ReplaceWithPrimaryConstructorParameter
         private readonly IMediator _mediator = mediator;
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace bankAccount.Controllers
         /// <summary>
         /// Get one account for id
         /// </summary>
-        /// <param name="id"> Id return account</param>
+        /// <param name="id"> id return account</param>
         /// <returns></returns>
         ///  <response code="200">Returns account</response>
         ///  <response code="404">No accounts found for ID:</response>
@@ -49,8 +49,24 @@ namespace bankAccount.Controllers
         public async Task<ActionResult> GetAccountById(Guid id)
         {
             var result = await _mediator.Send(new GetAccountByIdQuery(id));
-            Console.WriteLine("Controller");
-            Console.WriteLine(id);
+
+            return (ActionResult)HandleResult(result);
+        }
+
+        /// <summary>
+        /// Get one balance for id
+        /// </summary>
+        /// <param name="id"> the account id for receiving the balance </param>
+        /// <returns></returns>
+        ///  <response code="200">Returns balance</response>
+        ///  <response code="404">No accounts found for ID:</response>
+        [Authorize]
+        [HttpGet("GetBalance")]
+        [ProducesResponseType(typeof(Account), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(MbError), StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> GetBalance(Guid id)
+        {
+            var result = await _mediator.Send(new GetBalanceQuery(id));
 
             return (ActionResult)HandleResult(result);
         }
@@ -75,7 +91,7 @@ namespace bankAccount.Controllers
         /// <summary>
         /// Receives an account statement from startDate to endDate
         /// </summary>
-        /// <param name="id">Id account for statement</param>
+        /// <param name="id">id account for statement</param>
         /// <param name="startDate">The initial date of the account statement</param>
         /// <param name="endDate">The end date of the account statement</param>
         /// <returns>List[Transaction]</returns>
@@ -94,6 +110,11 @@ namespace bankAccount.Controllers
 
             if (!accountResult.IsSuccess)
                 return (ActionResult)HandleResult(accountResult);
+
+            if (accountResult.Value == null)
+            {
+                return (ActionResult)HandleResult(accountResult);
+            }
 
             var transactions = accountResult.Value.Transactions;
 
@@ -126,12 +147,29 @@ namespace bankAccount.Controllers
 
             var result = await _mediator.Send(new AddAccountCommand(accountModel));
 
-            if (result.IsSuccess)
+            if (result is { IsSuccess: true, Value: not null })
             {
                 return CreatedAtRoute("GetAccountById", new { id = result.Value.Id }, result);
             }
 
             return (ActionResult)HandleResult(result);
+        }
+
+        [Authorize]
+        [HttpPut("closeAccount")]
+        [ProducesResponseType(typeof(MbResult<Account>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(MbResult<object>), StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> CloseAccount(Guid id)
+        {
+            var result = await _mediator.Send(new CloseAccountCommand(id));
+            return (ActionResult)HandleResult(result);
+        }
+
+        [HttpPut("accrual of interest")]
+        public async Task<ActionResult> AccrualOfInterest(Guid id)
+        { 
+            await _mediator.Send(new AccrualOfInterestCommand(id));
+            return Ok();
         }
 
         /// <summary>
@@ -183,15 +221,17 @@ namespace bankAccount.Controllers
         /// <response code="421">If validation fails</response>
         [Authorize]
         [HttpPost("accounts/{id}/transactions")]
-        public async Task<ActionResult> CreateTransaction(Guid id, [FromBody] CreateTransactionDto newTransactionDto)
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(MbResult<object>), StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> CreateTransaction(Guid id, [FromBody] CreateTransactionDto newTransactionDto)
         {
-            var trasnactionModel = newTransactionDto.ToTransactionFromCreate();
-            trasnactionModel.Id = Guid.NewGuid();
-            trasnactionModel.CounterpartyAccountId = newTransactionDto.AccountId;
-            var account = await _mediator.Send(new  CreateTransactionCommand(id, trasnactionModel));
-            if (account == null) return NotFound($"No accounts found for Id: {trasnactionModel.AccountId}");
+            var transactionModel = newTransactionDto.ToTransactionFromCreate();
+            transactionModel.Id = Guid.NewGuid();
+            transactionModel.CounterpartyAccountId = newTransactionDto.AccountId;
+            var account = await _mediator.Send(new  CreateTransactionCommand(id, transactionModel));
+            
 
-            return Ok(account);
+            return (ActionResult)HandleResult(account);
         }
 
         /// <summary>
@@ -207,11 +247,24 @@ namespace bankAccount.Controllers
         {
             var transferModel = transferDto.ToTransferFromCreate();
             transferModel.Id = Guid.NewGuid();
-            var account = await _mediator.Send(new AddTransferCommand(transferModel));
 
-            if (account == null) return NotFound("One or both accounts not found");
+            var result = await _mediator.Send(new AddTransferCommand(transferModel));
 
-            return Ok(account);
+            if (result == null)
+                return StatusCode(500, "Unexpected error");
+
+            if (result is { IsSuccess: false, Error: not null })
+            {
+                return result.Error.Message switch
+                {
+                    "NOT_FOUND" => NotFound(result.Error.Message),
+                    "VALIDATION" => BadRequest(result.Error.Message),
+                    "CONFLICT" => Conflict(result.Error.Message),
+                    _ => StatusCode(500, result.Error.Message)
+                };
+            }
+
+            return Ok(result.Value);
         }
 
         [AllowAnonymous]
