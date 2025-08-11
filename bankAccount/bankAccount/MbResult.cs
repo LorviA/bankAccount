@@ -41,6 +41,7 @@
         /// <summary>
         /// Создание результата с ошибкой валидации
         /// </summary>
+        // ReSharper disable once UnusedMember.Global
         public static MbResult<T> ValidationFailure(IDictionary<string, string[]> errors)
             => new(default, false, MbError.ValidationError(errors));
     }
@@ -79,6 +80,18 @@
             => new(400, "Validation error", errors);
 
         /// <summary>
+        /// Ошибка валидации (простое сообщение)
+        /// </summary>
+        public static MbError Validation(string message)
+            => new(400, message);
+
+        /// <summary>
+        /// Конфликт (HTTP 409)
+        /// </summary>
+        public static MbError Conflict(string message)
+            => new(409, message);
+
+        /// <summary>
         /// Ресурс не найден
         /// </summary>
         public static MbError NotFound(string message)
@@ -87,6 +100,7 @@
         /// <summary>
         /// Ошибка аутентификации
         /// </summary>
+        // ReSharper disable once UnusedMember.Global
         public static MbError Unauthorized(string message = "Unauthorized")
             => new(401, message);
 

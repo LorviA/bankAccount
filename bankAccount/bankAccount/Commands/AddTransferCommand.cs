@@ -3,5 +3,5 @@ using MediatR;
 
 namespace bankAccount.Commands
 {
-    public record AddTransferCommand(Transaction Transfer): IRequest<MbResult<IEnumerable<Account>>>;
+    public record AddTransferCommand(Transaction Transfer): IRequest<MbResult<IEnumerable<Account>>?>;
 }
