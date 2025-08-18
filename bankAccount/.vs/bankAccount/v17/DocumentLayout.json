@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,10 +44,17 @@
       "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
+=======
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\keycloak-setup\\realm-export.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\keycloak-setup\\realm-export.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\validation\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\validation\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -77,12 +85,17 @@
     {
       "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\commands\\addtransfercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\commands\\addtransfercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     },
     {
       "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\handlers\\deleteaccountcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\handlers\\deleteaccountcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\commands\\deleteaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\commands\\deleteaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -103,12 +116,15 @@
       "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\handlers\\getaccountshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+=======
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\handlers\\createtransactioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\handlers\\createtransactioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\handlers\\addaccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\handlers\\addaccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+<<<<<<< Updated upstream
     },
     {
       "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\validators\\addaccountcomandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -205,6 +221,8 @@
     {
       "AbsoluteMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|c:\\users\\user\\desktop\\bankaccount\\bankaccount\\bankaccount\\abstractions\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{685C1FA5-5067-4F40-9737-39A25C7954F0}|bankAccount\\bankAccount.csproj|solutionrelative:bankaccount\\abstractions\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -219,6 +237,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "bankAccount\\Controllers\\AccountController.cs",
@@ -228,10 +247,21 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T19:42:07.698Z",
               "IsPinned": true,
+=======
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-08-18T08:36:35.135Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 12,
               "Title": "AccountRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Data\\AccountRepository.cs",
@@ -278,12 +308,22 @@
               "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\appsettings.json",
               "RelativeToolTip": "bankAccount\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+=======
+              "DocumentIndex": 1,
+              "Title": "realm-export.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\keycloak-setup\\realm-export.json",
+              "RelativeDocumentMoniker": "bankAccount\\keycloak-setup\\realm-export.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\keycloak-setup\\realm-export.json",
+              "RelativeToolTip": "bankAccount\\keycloak-setup\\realm-export.json",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAkwCgAAAABAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-28T07:45:39.831Z",
+              "WhenOpened": "2025-08-18T08:35:05.915Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 9,
               "Title": ".dockerignore",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\.dockerignore",
@@ -317,11 +357,49 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2025-08-03T18:08:23.355Z",
+=======
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Program.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Program.cs",
+              "RelativeToolTip": "bankAccount\\Program.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAwwJEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T08:04:07.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeleteAccountCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\DeleteAccountCommandHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Handlers\\DeleteAccountCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\DeleteAccountCommandHandler.cs",
+              "RelativeToolTip": "bankAccount\\Handlers\\DeleteAccountCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T08:03:59.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddAccountHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\AddAccountHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Handlers\\AddAccountHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\AddAccountHandler.cs",
+              "RelativeToolTip": "bankAccount\\Handlers\\AddAccountHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T08:03:29.044Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+<<<<<<< Updated upstream
               "Title": "ServiceCollectionExtension.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Extensions\\ServiceCollectionExtension.cs",
               "RelativeDocumentMoniker": "bankAccount\\Extensions\\ServiceCollectionExtension.cs",
@@ -382,6 +460,16 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
               "WhenOpened": "2025-08-03T19:41:55.221Z",
+=======
+              "Title": "CreateTransactionCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\CreateTransactionCommandHandler.cs",
+              "RelativeDocumentMoniker": "bankAccount\\Handlers\\CreateTransactionCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\bankAccount\\bankAccount\\bankAccount\\Handlers\\CreateTransactionCommandHandler.cs",
+              "RelativeToolTip": "bankAccount\\Handlers\\CreateTransactionCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T08:02:09.122Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
