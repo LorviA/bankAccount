@@ -11,11 +11,21 @@ services:
         dockerfile: bankAccount/Dockerfile
     ports:
       - "8080:80"
+    depends_on:
+     db:
+      condition: service_healthy
+     keycloak:
+        condition: service_started
     environment:
       - Jwt__Authority=http://keycloak:8080/realms/bank
       - Jwt__Audience=account-service
-
-
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=accounts
+      - DB_USER=postgres
+      - DB_PASSWORD=postgrespw
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
   keycloak:
     networks:
       - mynet
@@ -28,5 +38,32 @@ services:
       - "8081:8080"
     volumes:
       - ./keycloak-setup:/opt/keycloak/data/import
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+  db:
+    networks:
+      - mynet
+    image: postgres:16
+    container_name: db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: accounts
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespw
+    volumes:
+      - db_data4:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  db_data4:
     
         

@@ -5,22 +5,32 @@ using bankAccount.Interfaces;
 using bankAccount.Validation;
 using bankAccount.Validators;
 using FluentValidation;
+using Hangfire;
+using Hangfire.PostgreSql;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
-using static System.Net.Mime.MediaTypeNames;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+    // Для Docker-окружения используем переменные окружения
+    var dbHost = Environment.GetEnvironmentVariable("DB_HOST") ?? "db";
+    var dbPort = Environment.GetEnvironmentVariable("DB_PORT") ?? "5432";
+    var dbName = Environment.GetEnvironmentVariable("DB_NAME") ?? "accounts";
+    var dbUser = Environment.GetEnvironmentVariable("DB_USER") ?? "postgres";
+    // ReSharper disable once StringLiteralTypo
+    var dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD") ?? "postgrespw";
+
+    var connectionString = $"Host={dbHost};Port={dbPort};Database={dbName};Username={dbUser};Password={dbPassword}";
+
 
 // Add services to the container.
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
-builder.Services.AddSingleton<AccountRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddValidatorsFromAssemblyContaining<AccountValidator>();
 
@@ -69,12 +79,19 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-builder.Services.AddSingleton<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<IInterestAccrualService, InterestAccrualService>();
 builder.Services.AddProblemDetails();
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddValidatorsFromAssembly(typeof (Program).Assembly);
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 builder.Services.AddTransient<GlobalExceptionHandler>();
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(connectionString, npg =>
+    {
+        npg.EnableRetryOnFailure();
+        npg.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName);
+    }));
 
 builder.Services.AddAuthentication(options =>
 {
@@ -88,13 +105,13 @@ builder.Services.AddAuthentication(options =>
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateAudience = true,
-        ValidAudiences = new[] { "account", "account-service" }, // Оба варианта
+        ValidAudiences = ["account", "account-service"], // Оба варианта
         ValidateIssuer = true,
-        ValidIssuers = new[]
-            {
-                "http://localhost:8081/realms/bank",  // Для запросов с хоста
+        ValidIssuers =
+        [
+            "http://localhost:8081/realms/bank",  // Для запросов с хоста
                 "http://keycloak:8080/realms/bank"   // Для запросов внутри Docker-сети
-            }
+        ]
     };
     options.RequireHttpsMetadata = false;
 });
@@ -113,8 +130,49 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddControllers();
 
+if (!builder.Environment.IsEnvironment("Test"))
+{
+#pragma warning disable CS0618 // Type or member is obsolete
+    builder.Services.AddHangfire(h => h.UsePostgreSqlStorage(connectionString, new PostgreSqlStorageOptions
+    {
+        QueuePollInterval = TimeSpan.FromSeconds(15),
+        InvisibilityTimeout = TimeSpan.FromHours(3),
+        PrepareSchemaIfNecessary = true,
+    }));
+#pragma warning restore CS0618 // Type or member is obsolete
+    builder.Services.AddHangfireServer();
+}
+
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    try
+    {
+        var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+        // Проверка существования БД
+        if (!dbContext.Database.CanConnect())
+        {
+            throw new Exception("Database is not available");
+        }
+
+        // Применяем миграции
+        dbContext.Database.Migrate();
+
+        // Проверка существования таблицы
+        //if (!dbContext.Database.GetAppliedMigrations().Any())
+        //{
+        //    throw new Exception("Migrations not applied");
+        //}
+    }
+    catch (Exception ex)
+    {
+        var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+        logger.LogCritical(ex, "Database migration failed");
+        throw;
+    }
+}
 
 if (app.Environment.IsDevelopment())
 {
@@ -122,6 +180,22 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseRouting();
+
+if (!builder.Environment.IsEnvironment("Test"))
+{
+    app.UseHangfireDashboard("/dashboard");
+
+
+    RecurringJob.AddOrUpdate<IInterestAccrualService>(
+        "daily-interest-accrual",
+        service => service.AccrueInterestForAllAccountsAsync(),
+        Cron.Daily,
+        new RecurringJobOptions
+        {
+            TimeZone = TimeZoneInfo.Local,
+            MisfireHandling = MisfireHandlingMode.Relaxed
+        });
+}
 
 app.UseCors("AllowAll");
 app.UseAuthentication();
@@ -132,3 +206,6 @@ app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();
+
+// ReSharper disable once RedundantTypeDeclarationBody
+public partial class Program {}

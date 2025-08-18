@@ -1,6 +1,4 @@
-﻿using bankAccount.Abstractions;
-using MediatR;
-using System.ComponentModel.DataAnnotations;
+﻿using MediatR;
 using FluentValidation;
 using bankAccount.Exceptions;
 
@@ -9,13 +7,14 @@ namespace bankAccount.Validation
     public sealed class ValidationBehavior<TRequest, TResponse>(IEnumerable<IValidator<TRequest>> validators) : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>
     {
+        // ReSharper disable once ReplaceWithPrimaryConstructorParameter
         private readonly IEnumerable<IValidator<TRequest>> _validators = validators;
 
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
             if (!_validators.Any())
             {
-                return await next();
+                return await next(cancellationToken);
             }
 
             var context = new ValidationContext<TRequest>(request);
@@ -39,7 +38,7 @@ namespace bankAccount.Validation
                 throw new ValidationAppException(errorsDictionary);
             }
 
-            return await next();
+            return await next(cancellationToken);
         }
     }
 }

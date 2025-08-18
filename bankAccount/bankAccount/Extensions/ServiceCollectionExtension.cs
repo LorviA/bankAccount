@@ -1,6 +1,5 @@
 ﻿namespace bankAccount.Extensions
 {
-    internal static class ServiceCollectionExtension
-    {
-    }
+    // ReSharper disable once UnusedMember.Global
+    internal static class ServiceCollectionExtension;
 }

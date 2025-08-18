@@ -1,23 +1,18 @@
 ﻿using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using bankAccount.Exceptions;
-using System.Net;
 using System.Text.Json;
 
 namespace bankAccount;
 
-public class GlobalExceptionHandler : IExceptionHandler
+public class GlobalExceptionHandler(
+    ILogger<GlobalExceptionHandler> logger,
+    IProblemDetailsService problemDetailsService) : IExceptionHandler
 {
-    private readonly ILogger<GlobalExceptionHandler> _logger;
-    private readonly IProblemDetailsService _problemDetailsService;
-
-    public GlobalExceptionHandler(
-        ILogger<GlobalExceptionHandler> logger,
-        IProblemDetailsService problemDetailsService)
-    {
-        _logger = logger;
-        _problemDetailsService = problemDetailsService;
-    }
+    // ReSharper disable once ReplaceWithPrimaryConstructorParameter
+    private readonly ILogger<GlobalExceptionHandler> _logger = logger;
+    // ReSharper disable once ReplaceWithPrimaryConstructorParameter
+    private readonly IProblemDetailsService _problemDetailsService = problemDetailsService;
 
     public async ValueTask<bool> TryHandleAsync(
         HttpContext httpContext,

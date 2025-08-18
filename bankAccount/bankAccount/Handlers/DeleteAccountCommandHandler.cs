@@ -1,19 +1,14 @@
 ﻿using bankAccount.Commands;
-using bankAccount.Data;
 using bankAccount.Interfaces;
 using bankAccount.Models;
 using MediatR;
 
 namespace bankAccount.Handlers
 {
-    public class DeleteAccountCommandHandler : IRequestHandler<DeleteAccountCommand, MbResult<Account>>
+    public class DeleteAccountCommandHandler(IAccountRepository accountRepository) : IRequestHandler<DeleteAccountCommand, MbResult<Account>>
     {
-        private readonly IAccountRepository _accountRepository;
-
-        public DeleteAccountCommandHandler(IAccountRepository accountRepository)
-        {
-            _accountRepository = accountRepository;
-        }
+        // ReSharper disable once ReplaceWithPrimaryConstructorParameter
+        private readonly IAccountRepository _accountRepository = accountRepository;
 
         public async Task<MbResult<Account>> Handle(
             DeleteAccountCommand request,

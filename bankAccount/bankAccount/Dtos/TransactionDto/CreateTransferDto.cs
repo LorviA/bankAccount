@@ -1,4 +1,5 @@
 ﻿using bankAccount.Models;
+// ReSharper disable once IdentifierTypo
 namespace bankAccount.Dtos.TransactionDto
 {
     public class CreateTransferDto

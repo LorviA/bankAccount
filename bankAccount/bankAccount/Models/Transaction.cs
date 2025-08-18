@@ -3,6 +3,32 @@
     public enum TransactionType { Credit, Debit }
     public class Transaction
     {
+        public Transaction()
+        {}
+
+        public Transaction(int type, decimal amount, string? currency, string? description)
+        {
+            Id = Guid.NewGuid();
+            AccountId = Guid.NewGuid();
+            CounterpartyAccountId = Guid.NewGuid();
+            Amount = amount;
+            Currency = currency;
+            Description = description;
+            Type = (TransactionType)type;
+            Time = DateTime.UtcNow;
+        }
+
+        public Transaction(Guid accountId, Guid counterpartyAccountId, int type, decimal amount, string? currency, string? description)
+        {
+            Id = Guid.NewGuid();
+            AccountId = accountId;
+            CounterpartyAccountId = counterpartyAccountId;
+            Amount = amount;
+            Currency = currency;
+            Description = description;
+            Type = (TransactionType)type;
+            Time = DateTime.UtcNow;
+        }
         /// <summary>
         /// Unique identifier for the transaction
         /// </summary>
@@ -30,6 +56,7 @@
         /// Currency code according to ISO 4217 standard
         /// </summary>
         /// <example>USD</example>
+        // ReSharper disable once EntityFramework.ModelValidation.UnlimitedStringLength
         public string? Currency { get; set; }// ISO 4217
 
         /// <summary>
@@ -40,6 +67,7 @@
         /// <summary>
         ///  max length 300
         /// </summary>
+        // ReSharper disable once EntityFramework.ModelValidation.UnlimitedStringLength
         public string? Description { get; set; }
 
         public DateTime Time { get; set; }

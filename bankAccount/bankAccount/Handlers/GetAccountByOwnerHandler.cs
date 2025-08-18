@@ -1,19 +1,14 @@
-﻿using bankAccount.Data;
-using bankAccount.Interfaces;
+﻿using bankAccount.Interfaces;
 using bankAccount.Models;
 using bankAccount.Queries1;
 using MediatR;
 
 namespace bankAccount.Handlers
 {
-    public class GetAccountByOwnerHandler: IRequestHandler<GetAccountByOwnerQuery, MbResult<IEnumerable<Account>>>
+    public class GetAccountByOwnerHandler(IAccountRepository accountRepository) : IRequestHandler<GetAccountByOwnerQuery, MbResult<IEnumerable<Account>>>
     {
-        private readonly IAccountRepository _accountRepository;
-
-        public GetAccountByOwnerHandler(IAccountRepository accountRepository)
-        {
-            _accountRepository = accountRepository;
-        }
+        // ReSharper disable once ReplaceWithPrimaryConstructorParameter
+        private readonly IAccountRepository _accountRepository = accountRepository;
 
         public async Task<MbResult<IEnumerable<Account>>> Handle(
             GetAccountByOwnerQuery request,
@@ -23,7 +18,8 @@ namespace bankAccount.Handlers
             {
                 var accounts = await _accountRepository.GetProductByOwner(request.OwnerId);
 
-                if (accounts == null || !accounts.Any())
+                // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
+                if (accounts == null)
                 {
                     return MbResult<IEnumerable<Account>>.Failure(
                         MbError.NotFound($"No accounts found for owner ID: {request.OwnerId}")

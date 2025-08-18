@@ -1,19 +1,14 @@
 ﻿using bankAccount.Commands;
-using bankAccount.Data;
 using bankAccount.Interfaces;
 using bankAccount.Models;
 using MediatR;
 
 namespace bankAccount.Handlers
 {
-    public class UpdateAccountCommandHandler : IRequestHandler<UpdateAccountCommand, MbResult<Account>>
+    public class UpdateAccountCommandHandler(IAccountRepository accountRepository) : IRequestHandler<UpdateAccountCommand, MbResult<Account>>
     {
-        private readonly IAccountRepository _accountRepository;
-
-        public UpdateAccountCommandHandler(IAccountRepository accountRepository)
-        {
-            _accountRepository = accountRepository;
-        }
+        // ReSharper disable once ReplaceWithPrimaryConstructorParameter
+        private readonly IAccountRepository _accountRepository = accountRepository;
 
         public async Task<MbResult<Account>> Handle(UpdateAccountCommand request, CancellationToken cancellationToken)
         {
@@ -28,6 +23,12 @@ namespace bankAccount.Handlers
                     );
                 }
                 var updatedAccount = await _accountRepository.UpdateProdict(request.Id, request.Accont);
+                if (updatedAccount == null)
+                {
+                    return MbResult<Account>.Failure(
+                        MbError.NotFound($"Account with ID {request.Id} not found")
+                    );
+                }
                 return MbResult<Account>.Success(updatedAccount);
             }
             catch (Exception ex)

@@ -3,6 +3,7 @@ using FluentValidation;
 
 namespace bankAccount.Validators
 {
+    // ReSharper disable once UnusedMember.Global
     public class UpdateAccountCommandValidator : AbstractValidator<UpdateAccountCommand>
     {
         public UpdateAccountCommandValidator()

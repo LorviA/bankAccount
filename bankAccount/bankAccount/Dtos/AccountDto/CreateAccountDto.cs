@@ -1,5 +1,6 @@
 ﻿using bankAccount.Models;
 
+// ReSharper disable once IdentifierTypo
 namespace bankAccount.Dtos.AccountDto
 {
     public class CreateAccountDto
@@ -25,6 +26,7 @@ namespace bankAccount.Dtos.AccountDto
         /// Currency code according to ISO 4217 standard
         /// </summary>
         /// <example>USD</example>
+        // ReSharper disable once UnusedMember.Global
         public string? Currency { get; set; } // ISO 4217
 
         public decimal? InterestRate { get; set; }

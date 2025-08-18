@@ -1,9 +1,22 @@
 ﻿using bankAccount.Models;
 
+// ReSharper disable once IdentifierTypo
 namespace bankAccount.Dtos.AccountDto
 {
     public class UpdateAccountDto
     {
+        public UpdateAccountDto() { }
+
+        public UpdateAccountDto(int type, decimal? balance, string? currency, decimal? interestRate, DateTime? closeDate)
+        {
+            OwnerId = Guid.NewGuid();
+            Type = (AccountType)type;
+            Balance = balance;
+            Currency = currency;
+            InterestRate = interestRate;
+            CloseDate = closeDate;
+            Transactions = [];
+        }
         /// <summary>
         /// Identifier of the account owner (user)
         /// </summary>

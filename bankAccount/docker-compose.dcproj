@@ -11,6 +11,7 @@
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>
     <None Include="docker-compose.yml" />
+    <!-- ReSharper disable once MarkupAttributeTypo -->
     <None Include=".dockerignore" />
   </ItemGroup>
 </Project>

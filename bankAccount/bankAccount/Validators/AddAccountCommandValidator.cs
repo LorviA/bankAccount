@@ -3,8 +3,11 @@ using FluentValidation;
 
 namespace bankAccount.Validators
 {
+    // ReSharper disable once IdentifierTypo
+    // ReSharper disable once UnusedMember.Global
     public class AddAccountComandValidator: AbstractValidator<AddAccountCommand>
     {
+        // ReSharper disable once IdentifierTypo
         public AddAccountComandValidator() 
         {
             RuleFor(p => p.Accont.OwnerId)

@@ -1,17 +1,36 @@
 ﻿using bankAccount.Commands;
-using bankAccount.Data;
+using bankAccount.Interfaces;
 using bankAccount.Models;
 using MediatR;
 
 namespace bankAccount.Handlers
 {
-    public class CreateTransactionCommandHandler(AccountRepository accountRepository) : IRequestHandler<CreateTransactionCommand, Account>
+    public class CreateTransactionCommandHandler(IAccountRepository accountRepository) : IRequestHandler<CreateTransactionCommand, MbResult<Account>>
     {
-        private readonly AccountRepository _accountRepository = accountRepository;
+        // ReSharper disable once ReplaceWithPrimaryConstructorParameter
+        private readonly IAccountRepository _accountRepository = accountRepository;
 
-        public async Task<Account> Handle(CreateTransactionCommand request, CancellationToken cancellationToken)
+        public async Task<MbResult<Account>> Handle(CreateTransactionCommand request, CancellationToken cancellationToken)
         {
-           return await _accountRepository.CreateTransaction(request.Id, request.Transaction);
+            try
+            {
+                var result = await _accountRepository.CreateTransaction(request.Id,request.Transaction);
+
+                if (result == null)
+                {
+                    return MbResult<Account>.Failure(
+                        MbError.NotFound("Transfer failed: invalid accounts or insufficient funds")
+                    );
+                }
+
+                return MbResult<Account>.Success(result);
+            }
+            catch (Exception ex)
+            {
+                return MbResult<Account>.Failure(
+                    MbError.Internal($"Error processing transfer: {ex.Message}")
+                );
+            }
         }
     }
 }

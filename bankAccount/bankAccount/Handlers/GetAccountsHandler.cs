@@ -1,14 +1,14 @@
-﻿using bankAccount.Data;
+﻿using bankAccount.Interfaces;
 using bankAccount.Models;
 using bankAccount.Queries1;
 using MediatR;
-using System.Security.Principal;
 
 namespace bankAccount.Handlers
 {
-    public class GetAccountsHandler(AccountRepository accountRepository) : IRequestHandler<GetAccountsQuery, MbResult<IEnumerable<Account>>>
+    public class GetAccountsHandler(IAccountRepository accountRepository) : IRequestHandler<GetAccountsQuery, MbResult<IEnumerable<Account>>>
     {
-        private readonly AccountRepository _accountRepository = accountRepository;
+        // ReSharper disable once ReplaceWithPrimaryConstructorParameter
+        private readonly IAccountRepository _accountRepository = accountRepository;
 
         public async Task<MbResult<IEnumerable<Account>>> Handle(
             GetAccountsQuery request,
